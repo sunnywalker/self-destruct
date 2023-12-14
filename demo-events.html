@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SelfDestruct Web Component Demos - Interactivity</title>
+    <script type="module" src="SelfDestruct.js"></script>
+    <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+    <h1>SelfDestruct Web Component Demos - Interactivity</h1>
+    <p><a href="demo.html">Basic demos</a>, <a href="demo-events.html">Interactivity demos</a>. Reload this page to restart the demos.</p>
+
+    <self-destruct ttl="7.5s" progress="pie" on-click="prevent">
+        <p>
+            This message will self-destruct in 7.5 seconds and includes a countdown pie chart.<br>
+            Tap this message to prevent the self-destruct from happening.<br>
+            <code>&lt;self-destruct ttl=&quot;7.5s&quot; progress=&quot;pie&quot; on-click=&quot;prevent&quot;&gt;…&lt;/self-destruct&gt;</code>
+        </p>
+    </self-destruct>
+
+    <self-destruct ttl="15s" progress="seconds" progress-target=".countdown" on-click="pause">
+        <p>
+            This message will self-destruct in <span class="countdown">15</span> seconds, with an included seconds countdown, placed into the first `.countdown` element.<br>
+            Tap this message to pause/resume the countdown.<br>
+            <code>&lt;self-destruct ttl=&quot;15s&quot; progress=&quot;seconds&quot; progress-target=&quot;.countdown&quot; on-click=&quot;pause&quot;&gt;…&lt;/self-destruct&gt;</code>
+        </p>
+    </self-destruct>
+
+    <self-destruct ttl="15s" progress="bar" on-click="reset">
+        <p>
+            This message will self-destruct in 15 seconds, with an included countdown bar.<br>
+            Tap this message to reset the countdown.<br>
+            <code>&lt;self-destruct ttl=&quot;15s&quot; progress=&quot;bar&quot; on-click=&quot;reset&quot;&gt;…&lt;/self-destruct&gt;</code>
+        </p>
+    </self-destruct>
+
+    <!-- alert sample -->
+    <self-destruct ttl="0">
+        <p class="alert">
+            <span>
+                This message will only self-destruct with the close button.<br>
+                <code>&lt;self-destruct ttl=&quot;0&quot;&gt;… &lt;button … class=&quot;self-destruct&quot;&gt;…&lt;/button&gt;&lt;/self-destruct&gt;</code>
+            </span>
+            <button type="button" class="self-destruct" title="Close this message">&times;</button>
+        </p>
+    </self-destruct>
+
+    <!-- toast samples -->
+    <div class="toast-container">
+        <self-destruct progress="bar" class="toast" ttl="10s" on-hover="prevent" on-click="destroy">
+            <p>Hover to prevent self-destruct; click to close.</p>
+            <button type="button" class="self-destruct">&times;</button>
+        </self-destruct>
+        <self-destruct progress="bar" class="toast" ttl="10s" on-hover="pause">
+            <p>Hover to pause self-destruct.</p>
+            <button type="button" class="self-destruct">&times;</button>
+        </self-destruct>
+        <self-destruct progress="bar" class="toast" ttl="10s" on-hover="reset">
+            <p>Hover to reset self-destruct timer.</p>
+            <button type="button" class="self-destruct">&times;</button>
+        </self-destruct>
+    </div>
+</body>
+</html>

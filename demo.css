@@ -1,0 +1,145 @@
+/* the following styling is for the demo and not necessary for the component */
+:root {
+    --alert-bg: #600;
+    --alert-color: #eee;
+    --sd-pie-bg: transparent;
+    --sd-pie-fg: #f00c;
+    --sd-bar-bg: #0002;
+}
+* { box-sizing: border-box; }
+@media (prefers-color-scheme: dark) {
+    :root {
+        --alert-bg: #900;
+        --sd-pie-fg: #f339;
+        --sd-bar-bg: #fff2;
+        color-scheme: dark;
+    }
+}
+
+.alert {
+    align-items: center;
+    background-color: var(--alert-bg);
+    border-radius: 3px;
+    color: var(--alert-color);
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.alert .self-destruct {
+    -webkit-appearance: none;
+    background-color: #fffd;
+    border-radius: 50%;
+    border-width: 0;
+    color: #000;
+    float: right;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    line-height: 1;
+    padding: 0.5em;
+    width: 2em;
+    height: 2em;
+}
+
+.alert .self-destruct:focus,
+.alert .self-destruct:hover {
+    background-color: #ff0c;
+}
+
+body {
+    font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+    height: 100%; /* needed for .toast-container */
+    position: relative; /* needed for .toast-container */
+}
+
+code {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    display: inline-block;
+    font-family: 'Jetbrains Mono', ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+    font-size: 0.9rem;
+    padding: 2px 4px;
+}
+
+[progress="bar"] .self-destruct-progress {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    top: 0;
+    width: 100%;
+}
+
+[progress="bar"] .self-destruct-progress-bar {
+    background-color: var(--sd-bar-bg);
+    height: 100%;
+    display: inline-block;
+}
+
+self-destruct {
+    display: block;
+    position: relative;
+}
+
+.self-destruct-svg {
+    float: left;
+    height: 1em;
+    margin-bottom: -0.1em;
+    margin-right: 0.5em;
+    width: 1em;
+}
+
+.self-destruct-svg-bg { fill: var(--sd-pie-bg); }
+.self-destruct-svg-fg { fill: var(--sd-pie-fg); }
+
+.toast-container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 2rem;
+    top: 2rem;
+    z-index: 9999;
+}
+.toast {
+    background-clip: border-box;
+    background-color: palegoldenrod;
+    border: 2px solid goldenrod;
+    border-radius: 2px;
+    color: #222;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    padding: 0;
+    position: relative;
+    text-align: left;
+    width: 20rem;
+}
+
+.toast p {
+    margin: 0;
+    padding: 1rem;
+}
+
+.toast .self-destruct-progress-bar {
+    background-color: #0001;
+}
+
+.toast .self-destruct {
+    background-color: transparent;
+    border: 0;
+    color: currentColor;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1;
+    padding: 0 4px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.toast .self-destruct:hover,
+.toast .self-destruct:focus {
+    color: red;
+}

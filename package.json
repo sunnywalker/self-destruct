@@ -1,0 +1,26 @@
+{
+  "name": "self-destruct",
+  "version": "1.0.0",
+  "description": "Web Component to add self-destructing functionality.",
+  "main": "SelfDestruct.js",
+  "scripts": {
+    "start": "npx http-server .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunnywalker/self-destruct.git"
+  },
+  "keywords": [
+    "web",
+    "components",
+    "timer",
+    "destroy"
+  ],
+  "author": "Sunny Walker <swalker@hawaii.edu> (https://www.miraclesalad.com/)",
+  "license": "GNU LGPL 3.0",
+  "bugs": {
+    "url": "https://github.com/sunnywalker/self-destruct/issues"
+  },
+  "homepage": "https://github.com/sunnywalker/self-destruct#readme"
+}

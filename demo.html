@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SelfDestruct Web Component Demos - Basic</title>
+    <script type="module" src="SelfDestruct.js"></script>
+    <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+    <h1>SelfDestruct Web Component Demos - Basic</h1>
+    <p><a href="demo.html">Basic demos</a>, <a href="demo-events.html">Interactivity demos</a>. Reload this page to restart the demos.</p>
+
+    <self-destruct>
+        <p>
+            This message will self-destruct in 5 seconds.<br>
+            <code>&lt;self-destruct&gt;…&lt;/self-destruct&gt;</code>
+        </p>
+    </self-destruct>
+
+    <self-destruct no-animation>
+        <p>
+            This message will self-destruct in 5 seconds, without the fade animation.<br>
+            <code>&lt;self-destruct no-animation&gt;…&lt;/self-destruct&gt;</code>
+        </p>
+    </self-destruct>
+
+    <self-destruct ttl="10s">
+        <p>
+            This message will self-destruct in 10 seconds.<br>
+            <code>&lt;self-destruct ttl=&quot;10s&quot;&gt;…&lt;/self-destruct&gt;</code>
+        </p>
+    </self-destruct>
+
+    <self-destruct ttl="11s" progress="pie">
+        <p>
+            This message will self-destruct in 11 seconds, with an included countdown pie chart.<br>
+            <code>&lt;self-destruct ttl=&quot;11s&quot; progress=&quot;pie&quot;&gt;…&lt;/self-destruct&gt;</code>
+        </p>
+    </self-destruct>
+
+    <self-destruct ttl="12s" progress="seconds" progress-target=".countdown">
+        <p>
+            This message will self-destruct in <span class="countdown">12</span> seconds, with an included seconds countdown, placed into the first `.countdown` element.<br>
+            <code>&lt;self-destruct ttl=&quot;12s&quot; progress=&quot;seconds&quot; progress-target=&quot;.countdown&quot;&gt;…&lt;/self-destruct&gt;</code>
+        </p>
+    </self-destruct>
+
+    <self-destruct ttl="13s" progress="bar">
+        <p>
+            This message will self-destruct in 13 seconds, with an included countdown bar.<br>
+            <code>&lt;self-destruct ttl=&quot;13s&quot; progress=&quot;bar&quot;&gt;…&lt;/self-destruct&gt;</code>
+        </p>
+    </self-destruct>
+
+    <self-destruct ttl="0">
+        <p>
+            This message will not self-destruct.<br>
+            <code>&lt;self-destruct ttl=&quot;0&quot;&gt;…&lt;/self-destruct&gt;</code>
+        </p>
+    </self-destruct>
+</body>
+</html>
